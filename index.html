@@ -10,6 +10,7 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      scroll-behavior: smooth;
     }
     body {
       font-family: 'Poppins', sans-serif;
@@ -23,9 +24,10 @@
       padding: 15px 20px;
       text-align: right;
       position: fixed;
-      width: 100%;
-      /* top: 0; */
+      top: 0;
       left: 0;
+      width: 100%;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       z-index: 1000;
     }
     .navbar a {
@@ -34,10 +36,13 @@
       margin: 0 15px;
       font-weight: 600;
     }
+    .navbar a:hover {
+      text-decoration: underline;
+    }
     .header-section {
       background-color: #0a192f;
       color: white;
-      padding: 80px 20px 40px;
+      padding: 100px 20px 40px;
       text-align: center;
       margin-top: 50px;
     }
@@ -47,6 +52,7 @@
       border-radius: 50%;
       object-fit: cover;
       object-position: top;
+      max-width: 100%;
     }
     section {
       padding: 40px 20px;
@@ -82,6 +88,10 @@
       padding: 10px 20px;
       border-radius: 25px;
       text-decoration: none;
+      text-align: center;
+    }
+    .resume-btn:hover {
+      background-color: #1f3a5f;
     }
     footer {
       text-align: center;
@@ -90,43 +100,25 @@
       color: white;
       margin-top: 30px;
     }
-    .navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #0a192f; /* Dark navbar */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow effect */
-    z-index: 1000; /* Ensure it's above other content */
-}
-a:hover {
-  text-decoration: underline;
-}
-.header:hover{
-  text-decoration: underline;
-}
- 
-
-#about:hover {
-  transform: scale(1.1);
-  transition: 0.3s;
-}
-#experience:hover{
-  transform: scale(1.1);
-  transition: 0.3s;
-}
-.header-section:hover{
-  transform: scale(1.1);
-  transition: 0.3s; 
-}
-
+    footer a {
+      color: #4db5ff;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+    #about:hover, #experience:hover, .header-section:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: 0.3s ease-in-out;
+    }
   </style>
 </head>
-<body >
+<body>
+
   <div class="navbar">
     <a href="#about">About</a>
     <a href="#experience">Experience</a>
     <a href="#contact">Contact</a>
-
   </div>
 
   <div class="header-section">
@@ -150,23 +142,24 @@ a:hover {
     <div class="experience-card">
       <h3>Backend Developer</h3>
       <p><strong>Sobyby Software Solutions, Jabalpur</strong></p>
-      <p>Jan 2024 - Jan 2024 (1 month)</p>
+      <p>Jan 2024 (1 month)</p>
     </div>
     <div class="experience-card">
       <h3>ReactJS Development (Internship)</h3>
       <p><strong>Robotronix Engineering Tech Pvt. Ltd, Indore</strong></p>
       <p>Sep 2023 - Oct 2023 (1 month)</p>
-    </section>
-  </div>
-  <div style="margin-left: 100px;">
+    </div>
+  </section>
+
+  <div style="text-align: center;">
     <a class="resume-btn" href="https://drive.google.com/file/d/1xU8Oxmi4zpc2RPaYZPSSp7ASKSiiutEm/view?usp=sharing" target="_blank">View Resume</a>
   </div>
-  
 
   <footer id="contact">
     <p>Contact: pp2451903@gmail.com | 
       LinkedIn: <a href="https://www.linkedin.com/in/pavan-kumar-patel-428438266/" target="_blank">linkedin.com/in/pavanpatel</a>
-   </p>
+    </p>
   </footer>
-  </body>
+
+</body>
 </html>
